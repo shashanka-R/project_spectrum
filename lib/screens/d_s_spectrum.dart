@@ -63,176 +63,178 @@ class _DSSpectrumState extends State<DSSpectrum> {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            Center(
-              child: AspectRatio(
-                aspectRatio: 0.8,
-                child: Container(
-                  margin: const EdgeInsets.all(
-                    16,
-                  ),
-                  padding: const EdgeInsets.only(
-                    right: 15,
-                    top: 20,
-                    bottom: 20,
-                  ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      6,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Center(
+                child: AspectRatio(
+                  aspectRatio: 0.8,
+                  child: Container(
+                    margin: const EdgeInsets.all(
+                      16,
                     ),
-                    color: Colors.white,
-                  ),
-                  child: LineChart(
-                    LineChartData(
-                      gridData: const FlGridData(
-                        show: true,
-                        verticalInterval: 1,
-                        drawHorizontalLine: false,
+                    padding: const EdgeInsets.only(
+                      right: 15,
+                      top: 20,
+                      bottom: 20,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        6,
                       ),
-                      lineTouchData: const LineTouchData(
-                        enabled: true,
-                      ),
-                      borderData: FlBorderData(
-                        show: false,
-                      ),
-                      titlesData: const FlTitlesData(
-                          // show: false,
-                          // leftTitles: AxisTitles(),
-                          topTitles: AxisTitles(),
-                          rightTitles: AxisTitles()),
-                      backgroundColor: Colors.white,
-                      lineBarsData: [
-                        LineChartBarData(
-                          dotData: const FlDotData(
-                            show: false,
-                          ),
-                          barWidth: 6,
-                          gradient: LinearGradient(
-                            colors: [
-                              Colors.deepPurple.shade100,
-                              Colors.deepPurple.shade200,
-                              Colors.deepPurple.shade300,
-                              Colors.deepPurple.shade400,
-                            ],
-                            end: Alignment.centerRight,
-                            begin: Alignment.centerLeft,
-                          ),
-                          isCurved: true,
-                          spots: [
-                            const FlSpot(0, 0),
-                            const FlSpot(1, 1),
-                            const FlSpot(2, 1),
-                            const FlSpot(3, 3),
-                            const FlSpot(4, 3),
-                            const FlSpot(5, 2),
-                          ],
+                      color: Colors.white,
+                    ),
+                    child: LineChart(
+                      LineChartData(
+                        gridData: const FlGridData(
+                          show: true,
+                          verticalInterval: 1,
+                          drawHorizontalLine: false,
                         ),
-                        LineChartBarData(
+                        lineTouchData: const LineTouchData(
+                          enabled: true,
+                        ),
+                        borderData: FlBorderData(
+                          show: false,
+                        ),
+                        titlesData: const FlTitlesData(
+                            // show: false,
+                            // leftTitles: AxisTitles(),
+                            topTitles: AxisTitles(),
+                            rightTitles: AxisTitles()),
+                        backgroundColor: Colors.white,
+                        lineBarsData: [
+                          LineChartBarData(
                             dotData: const FlDotData(
                               show: false,
                             ),
+                            barWidth: 6,
                             gradient: LinearGradient(
                               colors: [
-                                Colors.cyan.shade100,
-                                Colors.cyan.shade300,
-                                Colors.cyan.shade500,
-                                Colors.cyan.shade600,
+                                Colors.deepPurple.shade100,
+                                Colors.deepPurple.shade200,
+                                Colors.deepPurple.shade300,
+                                Colors.deepPurple.shade400,
                               ],
                               end: Alignment.centerRight,
                               begin: Alignment.centerLeft,
                             ),
-                            show: true,
-                            barWidth: 6,
                             isCurved: true,
                             spots: [
-                              const FlSpot(0, 2),
-                              const FlSpot(1, 2),
-                              const FlSpot(2, 3),
-                              const FlSpot(3, 4),
-                              const FlSpot(4, 5),
-                              const FlSpot(5, 4),
-                            ]),
-                      ],
+                              const FlSpot(0, 0),
+                              const FlSpot(1, 1),
+                              const FlSpot(2, 1),
+                              const FlSpot(3, 3),
+                              const FlSpot(4, 3),
+                              const FlSpot(5, 2),
+                            ],
+                          ),
+                          LineChartBarData(
+                              dotData: const FlDotData(
+                                show: false,
+                              ),
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.cyan.shade100,
+                                  Colors.cyan.shade300,
+                                  Colors.cyan.shade500,
+                                  Colors.cyan.shade600,
+                                ],
+                                end: Alignment.centerRight,
+                                begin: Alignment.centerLeft,
+                              ),
+                              show: true,
+                              barWidth: 6,
+                              isCurved: true,
+                              spots: [
+                                const FlSpot(0, 2),
+                                const FlSpot(1, 2),
+                                const FlSpot(2, 3),
+                                const FlSpot(3, 4),
+                                const FlSpot(4, 5),
+                                const FlSpot(5, 4),
+                              ]),
+                        ],
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.deepPurple.shade400,
-                borderRadius: BorderRadius.circular(
-                  50,
+              Container(
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple.shade400,
+                  borderRadius: BorderRadius.circular(
+                    50,
+                  ),
+                ),
+                margin: const EdgeInsets.all(
+                  20,
+                ),
+                padding: const EdgeInsets.all(
+                  15,
+                ),
+                child: const Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      'Spectrum Capture',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(
+                      Icons.calendar_view_month,
+                      color: Colors.lightGreen,
+                    )
+                  ],
                 ),
               ),
-              margin: const EdgeInsets.all(
-                20,
-              ),
-              padding: const EdgeInsets.all(
-                15,
-              ),
-              child: const Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Spectrum Capture',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+              Container(
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: Colors.deepPurple.shade400,
+                  borderRadius: BorderRadius.circular(
+                    50,
+                  ),
+                ),
+                margin: const EdgeInsets.all(
+                  20,
+                ),
+                padding: const EdgeInsets.all(
+                  15,
+                ),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      'Last Updated Now',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Icon(
+                      Icons.autorenew_rounded,
                       color: Colors.white,
                     ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Icon(
-                    Icons.calendar_view_month,
-                    color: Colors.lightGreen,
-                  )
-                ],
-              ),
-            ),
-            Container(
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.deepPurple.shade400,
-                borderRadius: BorderRadius.circular(
-                  50,
+                  ],
                 ),
               ),
-              margin: const EdgeInsets.all(
-                20,
-              ),
-              padding: const EdgeInsets.all(
-                15,
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Text(
-                    'Last Updated Now',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Icon(
-                    Icons.autorenew_rounded,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

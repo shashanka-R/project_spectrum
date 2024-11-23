@@ -5,11 +5,12 @@ import 'package:input_quantity/input_quantity.dart';
 import 'package:project_spectrum/screens/d_s_spectrum.dart';
 import 'package:project_spectrum/screens/diagnostic_screen.dart';
 import 'package:project_spectrum/screens/status_screen.dart';
-import 'package:syncfusion_flutter_charts/charts.dart';
 
 const double borderRadius = 25.0;
 
 class CustomSwitchState extends StatefulWidget {
+  const CustomSwitchState({super.key});
+
   @override
   _CustomSwitchStateState createState() => _CustomSwitchStateState();
 }
@@ -686,26 +687,46 @@ class _CustomSwitchStateState extends State<CustomSwitchState>
                                               4,
                                             ),
                                           ),
-                                          // plusBtn: Container(
-                                          //   decoration: BoxDecoration(
-                                          //     borderRadius:
-                                          //         BorderRadius.circular(
-                                          //       4,
-                                          //     ),
-                                          //     color: Colors.green,
-                                          //   ),
-                                          //   width: 24,
-                                          //   height: 24,
-                                          //   child: Text(
-                                          //     '+',
-                                          //     style: TextStyle(
-                                          //       fontSize: 16,
-                                          //     ),
-                                          //   ),
-                                          //   alignment: Alignment.center,
-                                          // ),
+                                          plusBtn: Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                4,
+                                              ),
+                                              color: Colors.deepPurple.shade300,
+                                            ),
+                                            width: 25,
+                                            height: 25,
+                                            alignment: Alignment.center,
+                                            child: const Text(
+                                              '+',
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                         minusBtn: Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                4,
+                                              ),
+                                              color: Colors.deepPurple.shade300,
+                                            ),
+                                            width: 25,
+                                            height: 25,
+                                            alignment: Alignment.center,
+                                            child: const Text(
+                                              '-',
+                                              style: TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
                                         ),
-                                        maxVal: 100,
+                                       maxVal: 100,
                                         initVal: 0,
                                         minVal: 0,
                                         steps: 1,
